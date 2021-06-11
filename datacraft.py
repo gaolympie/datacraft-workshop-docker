@@ -20,7 +20,7 @@ from utils.ui import (
 )
 
 st.set_page_config(
-    page_title="Playground", layout="wide", page_icon="./images/flask.png"
+    page_title="Docker Workshop", layout="wide", page_icon="./images/flask.png"
 )
 
 st.image(["./images/ekidatacraft.png"],width=300)
