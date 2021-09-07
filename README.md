@@ -1,5 +1,5 @@
 # datacraft-workshop-docker
-Code used for the datacraft docker workshop
+Code used for the datacraft docker workshop :
 
 ## local execution
 * Create virtual environment
