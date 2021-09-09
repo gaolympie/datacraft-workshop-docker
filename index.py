@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 import streamlit as st
 
 from utils.functions import (
@@ -20,10 +20,13 @@ from utils.ui import (
 )
 
 st.set_page_config(
-    page_title="Eki & Datacraft workshop", layout="wide", page_icon="./images/flask.png"
+    page_title="Eki & Datacraft workshop",
+    layout="wide",
+    page_icon="./images/flask.png",
 )
 
-st.image(["./images/ekidatacraft.png"],width=300)
+st.image(["./images/ekidatacraft.png"], width=300)
+
 
 def sidebar_controllers():
     dataset, n_samples, train_noise, test_noise, n_classes = dataset_selector()
@@ -52,7 +55,15 @@ def sidebar_controllers():
 
 
 def body(
-    x_train, x_test, y_train, y_test, degree, model, model_type, train_noise, test_noise
+    x_train,
+    x_test,
+    y_train,
+    y_test,
+    degree,
+    model,
+    model_type,
+    train_noise,
+    test_noise,
 ):
     introduction()
     col1, col2 = st.beta_columns((1, 1))

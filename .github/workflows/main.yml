@@ -12,9 +12,17 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: install pytest
+      run: pip install pytest
+    - name: testing
+      run: pytest
 
   build:
-
+    needs: pytest
     runs-on: ubuntu-latest
 
 
@@ -49,7 +57,7 @@ jobs:
     - name: Push the Docker image 
       run: docker push axreki/dockercraft-githubactions:${{ github.sha }}
       
-      
+
     #  ___      _    _ _    _      _           _                        _             
     # | _ \_  _| |__| (_)__| |_   | |_ ___    /_\   ____  _ _ _ ___    /_\  _ __ _ __ 
     # |  _/ || | '_ \ | (_-< ' \  |  _/ _ \  / _ \ |_ / || | '_/ -_)  / _ \| '_ \ '_ \
