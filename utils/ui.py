@@ -16,7 +16,7 @@ from utils.functions import img_to_bytes
 
 
 def introduction():
-    st.title("**Welcome to playground 🧪**")
+    st.title("**Welcome to your playground 🧪**")
     st.subheader(
         """
         This is a place where you can get familiar with machine learning models directly from your browser.
