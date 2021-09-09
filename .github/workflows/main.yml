@@ -39,4 +39,4 @@ jobs:
    #     images: axreki/dockercraft-githubactions:latest
     
     - name: Push the Docker Image
-      run: docker push axreki/dockercraft-githubactions:latest
+      run: docker push axreki/dockercraft-githubactions
